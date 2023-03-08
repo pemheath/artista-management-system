@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ac8ccc0-6215-465d-ba33-2af47ecfe609" name="Changes" comment="" />
+    <list default="true" id="9ac8ccc0-6215-465d-ba33-2af47ecfe609" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Activity/StudentAppActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MenuOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StudentInfo/Rank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dynamodb/MembershipDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dynamodb/StudentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dynamodb/models/Membership.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dynamodb/models/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ClassDiagram.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Program Architecture Diagram.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +29,21 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="UML Class" />
+        <option value="UML Deployment" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MVnjFXvqUlGRz5rJ8K9LzsbQFF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -26,8 +53,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultPlantUmlFileTemplate": "UML Deployment",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

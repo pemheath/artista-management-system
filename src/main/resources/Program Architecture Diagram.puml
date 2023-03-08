@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/deployment-diagram
+
+actor User
+rectangle frontendClient
+rectangle academyManagementService
+
+@enduml

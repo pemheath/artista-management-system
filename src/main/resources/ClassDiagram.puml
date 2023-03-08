@@ -1,0 +1,124 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class App {
+- inputHandler: Scanner
+- studentAppActivity: StudentAppActivity
++ void run()
+- handleUserRequest(): String
+}
+
+App --> StudentActivity : runs a
+
+class StudentActivity {
+- studentDao: StudentDao
+- membershipDao: MembershipDao
++ enrollNewStudent(Student student) : boolean
++ void updateStudentInformation (Student student)
++ void updateMembership (Membership membership, Student student)
++ void checkStudentIntoClass (Student student)
++ viewStudentMatTime (Student student): String
++ viewStudentData (Student student) : String
++ viewStudentsByRank (ENUM rank) : String
+
+}
+
+
+class Student {
+-studentId: String
+-firstName: String
+- lastName: String
+- matTime: Map<String, Integer> // keys: Class types values: number of classes
+- rank: ENUM
+- membership: Membership
+-notes: List<String>
+- memberSince: ZonedDateTime
+- isActivelyTraining: boolean // note: this does not refer to membership
++ void promote(ENUM rank)
++ void addTrainingSession()
+}
+
+class TrainingSession{
+- classType: ENUM
+- classDate: ZonedDateTime
+- isRegistered: boolean
+- attended: boolean
++ void checkIn () // adds training session information to student profile
+}
+
+class Membership{
+- memberSince: ZonedDateTime
+- membershipType: ENUM
+- isActive: boolean // note: this refers to whether the student has an active membership
+- isPaused: boolean
+- membershipLength: ZonedDateTime
+- paymentMethod: Payment
+}
+
+class Payment {
+- paymentType: String
+- paymentDate: String
+}
+
+class StudentDao{
+- mapper: DynamoDBMapper
++ getStudent (int memberId) : Student
++ getStudent(String firstName, String lastName ) : List<Student>
++ boolean saveStudent(Student student)
+}
+
+class MembershipDao {
+- mapper: DynamoDBMapper
++ getMembership(int memberId) : Membership
++ void saveMembership(Membership membership)
+}
+
+StudentActivity *-- StudentDao : has a
+StudentActivity *-- MembershipDao : has a
+MembershipDao *-- DynamoDBMapper : has a
+StudentDao *-- DynamoDBMapper : has a
+
+TrainingSession --|> ClassType
+
+
+Student --> Membership
+Student -- TrainingSession : attends, resulting in change to matTime
+Membership --> MembershipType
+Membership --> Payment
+Student --> Rank
+
+
+enum Rank {
+WHITE
+WHITE_ONE
+WHITE_TWO
+WHITE_THREE
+WHITE_FOUR
+BLUE
+PURPLE
+BROWN
+BLACK
+}
+
+enum ClassType {
+BASICS
+FUNDAMENTALS
+ADVANCED
+COMPETITION
+NO_GI
+OPEN_MAT
+}
+
+enum MembershipType {
+UNLIMITED
+TEN_CLASS_PACK
+TWELVE_PER_MONTH
+COACH
+}
+
+
+
+
+
+
+@enduml
